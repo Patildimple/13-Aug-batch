@@ -1,0 +1,57 @@
+//parent class
+	class Company {
+		//global variable
+		int emp=11;	
+		//method with method overloading use of this keyword
+		void employee() {	
+			int emp=202;												
+		System.out.println("Method 1 overloading with inheritance of class company ");
+		System.out.println("Local emp of class company is:"+emp);					
+		System.out.println("Local emp of class company is:"+this.emp);	
+	}
+		void employee(int a) {
+			System.out.println("Local emp of class company is:"+this.emp);
+		}
+		//constructor with overloading and use of this()
+		Company(double s){
+			this();
+			System.out.println("Company1 constructor called....");
+		}
+		Company(){
+			System.out.println("Constructor of class company2 is called ");
+		}
+		}
+	// child class of Company
+	class acceleration extends Company {
+		//global variable name as Company name variable
+		double empid=25.25;
+			//method with method overloading use of this & super keyword
+		int Manager(){
+			int emp=22;
+			System.out.println("class company emp is:"+super.emp);
+			System.out.println("class 1 company emp is:"+emp);
+			return (20);
+		}
+		void Manager(int q) {  
+			System.out.println("class accelereation manager called");
+		super.employee();
+		super.employee(20);
+		}
+			//constructor with overloading and use of this() & super()
+		acceleration(){
+			this(25);
+			System.out.println("costructor of accel called");
+		}
+		acceleration(int d){
+			super(25.25);
+			System.out.println("costructor 2 of accel called");
+		}
+	}
+	public class Inheritance9 {
+		public static void main(String[] args) {
+			acceleration obj=new acceleration();
+			obj.Manager();
+			obj.Manager(30);
+			
+		}
+	}
